@@ -3,17 +3,20 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Career from './pages/Career';
+import { RecoilRoot } from 'recoil';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path={'/'} element={<Home />} />
-          <Route path={'/projects'} element={<Projects />} />
-          <Route path={'/career'} element={<Career />} />
-        </Routes>
-      </BrowserRouter>
+      <RecoilRoot>
+        <BrowserRouter>
+          <Routes>
+            <Route path={'/'} element={<Home />} />
+            <Route path={'/projects'} element={<Projects />} />
+            <Route path={'/career'} element={<Career />} />
+          </Routes>
+        </BrowserRouter>
+      </RecoilRoot>
     </div>
   );
 }
