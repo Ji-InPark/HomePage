@@ -1,7 +1,11 @@
 import React from 'react';
 
-const SvgComponent = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={50} height={50} viewBox="0 0 16 16">
+interface Props {
+  size: number;
+}
+
+const SvgComponent = ({ size }: Props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 16 16">
     <g fill="currentColor">
       <path d="M8 .25a.75.75 0 0 1 .75.75v1.273a.75.75 0 0 1-1.5 0V1A.75.75 0 0 1 8 .25z" />
       <path fillRule="evenodd" d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" clipRule="evenodd" />
