@@ -4,40 +4,24 @@ import { darkModeAtoms } from '../../recoil/atoms';
 import Moon from '../../assets/icons/Moon';
 import { css } from '@emotion/react';
 import Sun from '../../assets/icons/Sun';
+import Colors from '../../assets/colors/Colors';
 
 function DarkModeButton() {
   const [darkMode, setDarkMode] = useRecoilState(darkModeAtoms);
-  const iconSize = 30;
-
-  if (darkMode) {
-    return (
-      <span
-        onClick={() => setDarkMode(false)}
-        css={css({
-          color: 'white',
-          '&:hover': {
-            color: '#02F657',
-            cursor: 'pointer',
-          },
-        })}
-      >
-        <Sun size={iconSize} />
-      </span>
-    );
-  }
+  const colors = Colors();
+  const iconSize = 40;
 
   return (
     <span
-      onClick={() => setDarkMode(true)}
+      onClick={() => setDarkMode((prev) => !prev)}
       css={css({
-        color: 'black',
+        color: colors.fontColor,
         '&:hover': {
-          color: '#FBE302',
           cursor: 'pointer',
         },
       })}
     >
-      <Moon size={iconSize} />
+      {darkMode ? <Sun size={iconSize} /> : <Moon size={iconSize} />}
     </span>
   );
 }
