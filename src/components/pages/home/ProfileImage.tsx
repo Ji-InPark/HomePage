@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 
 interface Props {
   imageUrl: string;
-  size: string;
+  size: number;
 }
 
 function ProfileImage({ imageUrl, size }: Props) {
@@ -14,6 +14,7 @@ function ProfileImage({ imageUrl, size }: Props) {
         width: size,
         height: size,
         borderRadius: '50%',
+        userSelect: 'none',
       })}
     />
   );
