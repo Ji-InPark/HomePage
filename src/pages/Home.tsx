@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import Colors from '../assets/colors/Colors';
+import Header from '../components/header/Header';
 
 function Home() {
   const colors = Colors();
@@ -17,11 +18,13 @@ function Home() {
       <div
         css={css({
           width: '70%',
+          height: '100%',
           marginLeft: 'auto',
           marginRight: 'auto',
-          color: colors.font,
+          color: colors.fontColor,
         })}
       >
+        <Header />
         home
       </div>
     </div>
