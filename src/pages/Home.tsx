@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import Colors from '../assets/colors/Colors';
 import Header from '../components/header/Header';
+import HomeBody from '../components/pages/home/HomeBody';
 
 function Home() {
   const colors = Colors();
@@ -11,7 +12,6 @@ function Home() {
       css={css({
         width: '100vw',
         height: '100vh',
-        transition: 'background-color 0.5s ease',
         background: colors.background,
       })}
     >
@@ -25,7 +25,7 @@ function Home() {
         })}
       >
         <Header />
-        home
+        <HomeBody />
       </div>
     </div>
   );
