@@ -16,6 +16,7 @@ function ShadowedText({ text, fontSize }: Props) {
       css={css({
         fontSize,
         textShadow: useShadow ? '0px 4px 4px rgba(0, 0, 0, 0.25)' : 'none',
+        userSelect: 'none',
       })}
     >
       {text}
