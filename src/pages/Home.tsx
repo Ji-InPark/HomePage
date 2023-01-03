@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { css } from '@emotion/react';
 import Colors from '../assets/colors/Colors';
 import Header from '../components/header/Header';
@@ -6,6 +6,10 @@ import HomeBody from '../components/pages/home/HomeBody';
 
 function Home() {
   const colors = Colors();
+
+  useEffect(() => {
+    document.title = 'Ji-In Park';
+  }, []);
 
   return (
     <div
