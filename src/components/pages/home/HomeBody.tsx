@@ -34,9 +34,9 @@ function HomeBody() {
           justifyContent: 'space-between',
         })}
       >
-        <IconButton iconElement={<GitHub size={iconSize} />} clickUrl={'https://github.com/Ji-InPark'} />
-        <IconButton iconElement={<Instagram size={iconSize} />} clickUrl={'https://www.instagram.com/j_n._.88/'} />
-        <IconButton iconElement={<EMail size={iconSize} />} clickUrl={'test'} />
+        <IconButton iconElement={<GitHub size={iconSize} />} onClick={() => open('https://github.com/Ji-InPark', 'blank=')} />
+        <IconButton iconElement={<Instagram size={iconSize} />} onClick={() => open('https://www.instagram.com/j_n._.88/', 'blank=')} />
+        <IconButton iconElement={<EMail size={iconSize} />} onClick={() => open('mailto:jin225675@naver.com')} />
       </div>
     </div>
   );
