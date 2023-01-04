@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import DarkModeButton from './DarkModeButton';
 import TextRouteButton from '../button/TextRouteButton';
+import TextUrlButton from '../button/TextUrlButton';
 
 function Header() {
   const centeredFlex = {
@@ -37,6 +38,7 @@ function Header() {
         <TextRouteButton text={'Home'} path={'/'} />
         <TextRouteButton text={'Projects'} path={'/projects'} />
         <TextRouteButton text={'Career'} path={'/career'} />
+        <TextUrlButton text={'Blog'} path={'https://jin-coding.tistory.com/'} />
       </div>
     </div>
   );
