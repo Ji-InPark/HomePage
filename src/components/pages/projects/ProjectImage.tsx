@@ -3,12 +3,12 @@ import { css } from '@emotion/react';
 
 interface Props {
   imageUrl: string;
+  width?: number;
+  height?: number;
 }
 
-function ProjectImage({ imageUrl }: Props) {
+function ProjectImage({ imageUrl, width = 500, height = 300 }: Props) {
   const divElement = useRef<HTMLDivElement>(null);
-  const width = 500;
-  const height = 300;
   const rotation = 15;
 
   const onMouseMove = (e: React.MouseEvent) => {
