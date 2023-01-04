@@ -9,7 +9,7 @@ interface Props {
   path: string;
 }
 
-function TextButton({ text, path }: Props) {
+function TextRouteButton({ text, path }: Props) {
   const useShadow = !useRecoilValue(darkModeAtoms);
 
   return (
@@ -33,4 +33,4 @@ function TextButton({ text, path }: Props) {
   );
 }
 
-export default TextButton;
+export default TextRouteButton;

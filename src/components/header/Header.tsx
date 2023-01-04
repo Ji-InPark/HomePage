@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import DarkModeButton from './DarkModeButton';
-import TextButton from '../button/TextButton';
+import TextRouteButton from '../button/TextRouteButton';
 
 function Header() {
   const centeredFlex = {
@@ -34,9 +34,9 @@ function Header() {
           gap: '50px',
         })}
       >
-        <TextButton text={'Home'} path={'/'} />
-        <TextButton text={'Projects'} path={'/projects'} />
-        <TextButton text={'Career'} path={'/career'} />
+        <TextRouteButton text={'Home'} path={'/'} />
+        <TextRouteButton text={'Projects'} path={'/projects'} />
+        <TextRouteButton text={'Career'} path={'/career'} />
       </div>
     </div>
   );
