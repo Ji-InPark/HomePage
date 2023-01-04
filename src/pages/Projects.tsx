@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { css } from '@emotion/react';
 import Header from '../components/header/Header';
 import Colors from '../assets/colors/Colors';
 
 function Projects() {
   const colors = Colors();
+
+  useEffect(() => {
+    document.title = 'Ji-In Park Projects';
+  }, []);
 
   return (
     <div
