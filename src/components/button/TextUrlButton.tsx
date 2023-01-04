@@ -19,6 +19,7 @@ function TextUrlButton({ text, path }: Props) {
         userSelect: 'none',
         textShadow: useShadow ? '0px 4px 4px rgba(0, 0, 0, 0.25)' : 'none',
         '&:visited': { color: 'inherit' },
+        '&:hover': { cursor: 'pointer' },
       })}
       onClick={() => open(path, 'blank=')}
     >
