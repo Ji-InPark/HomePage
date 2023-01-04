@@ -4,14 +4,14 @@ import JSX = jsx.JSX;
 
 interface Props {
   iconElement: JSX.Element;
-  onClick: () => void;
+  openUrl?: string;
+  onClick?: () => void;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function IconButton({ iconElement, onClick }: Props) {
+function IconButton({ iconElement, onClick, openUrl }: Props) {
   return (
     <span
-      onClick={onClick}
+      onClick={onClick ? onClick : () => open(openUrl, 'blank=')}
       css={css({
         '&:hover': {
           cursor: 'pointer',
