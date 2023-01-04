@@ -8,5 +8,4 @@ export type Project = {
 
 export type ProjectLink = {
   icon: JSX.Element;
-  link: string;
 };
