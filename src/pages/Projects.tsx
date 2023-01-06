@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { css } from '@emotion/react';
 import Header from '../components/header/Header';
 import Colors from '../assets/colors/Colors';
+import ProjectsBody from '../components/pages/projects/ProjectsBody';
 
 function Projects() {
   const colors = Colors();
@@ -14,7 +15,6 @@ function Projects() {
     <div
       css={css({
         width: '100vw',
-        height: '100vh',
         background: colors.basicBackground,
       })}
     >
@@ -28,6 +28,7 @@ function Projects() {
         })}
       >
         <Header />
+        <ProjectsBody />
       </div>
     </div>
   );
