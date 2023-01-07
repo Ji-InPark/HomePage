@@ -1,5 +1,5 @@
 export type Project = {
-  imageUrl: string;
+  imageIcon: JSX.Element;
   title: string;
   subTitle: string;
   links: Array<ProjectLink>;

@@ -4,11 +4,18 @@ import PlayStore from '../assets/icons/PlayStore';
 import Chain from '../assets/icons/Chain';
 import { Project } from '../types';
 import IconButton from '../components/button/IconButton';
+import ProjectImage from '../components/pages/projects/ProjectImage';
+import React from 'react';
 
 const iconSize = 40;
 
 export const KuLeumBridge: Project = {
-  imageUrl: 'https://github.com/Ji-InPark/KULEUM_BRIDGE/blob/master/KuleumBridge/app/src/main/res/drawable/kuleum_icon.png?raw=true',
+  imageIcon: (
+    <ProjectImage
+      imageUrl={'https://github.com/Ji-InPark/KULEUM_BRIDGE/blob/master/KuleumBridge/app/src/main/res/drawable/kuleum_icon.png?raw=true'}
+      width={300}
+    />
+  ),
   title: '쿠름다리 - KU:LeumBridge',
   subTitle: '건국대학교 비공식 앱',
   links: [
@@ -30,7 +37,7 @@ export const KuLeumBridge: Project = {
 };
 
 export const KAgent: Project = {
-  imageUrl: 'https://github.com/Ji-InPark/ForImage/blob/master/k-agent/k-agent-1.png?raw=true',
+  imageIcon: <ProjectImage imageUrl={'https://github.com/Ji-InPark/ForImage/blob/master/k-agent/k-agent-1.png?raw=true'} />,
   title: 'K-Agent',
   subTitle: '병역특례 업체 조회 웹사이트',
   links: [
@@ -50,8 +57,13 @@ export const KAgent: Project = {
 };
 
 export const LCTP: Project = {
-  imageUrl:
-    'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fck7rvv%2FbtrnbJuGRZJ%2FGE5R89HSQtRL1LeSKdkKjK%2Fimg.png',
+  imageIcon: (
+    <ProjectImage
+      imageUrl={
+        'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fck7rvv%2FbtrnbJuGRZJ%2FGE5R89HSQtRL1LeSKdkKjK%2Fimg.png'
+      }
+    />
+  ),
   title: 'LCTP',
   subTitle: 'LeetCode 오늘의 문제 Redirect service',
   links: [

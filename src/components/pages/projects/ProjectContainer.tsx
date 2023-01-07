@@ -1,5 +1,4 @@
 import React from 'react';
-import ProjectImage from './ProjectImage';
 import { css } from '@emotion/react';
 import { Project } from '../../../types';
 import ProjectDescription from './ProjectDescription';
@@ -17,7 +16,7 @@ function ProjectContainer({ project }: Props) {
         gridTemplateColumns: '50% 50%',
       })}
     >
-      <ProjectImage imageUrl={project.imageUrl} />
+      {project.imageIcon}
       <ProjectDescription project={project} />
     </div>
   );
