@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import { useRecoilValue } from 'recoil';
 import { darkModeAtoms } from '../../recoil/atoms';
+import { underlineAnimation } from '../../assets/styles';
 
 interface Props {
   text: string;
@@ -22,7 +23,7 @@ function TextUrlButton({ text, path }: Props) {
       })}
       onClick={() => open(path, 'blank=')}
     >
-      {text}
+      <span css={underlineAnimation(false)}>{text}</span>
     </span>
   );
 }
