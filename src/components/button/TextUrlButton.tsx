@@ -15,7 +15,6 @@ function TextUrlButton({ text, path }: Props) {
     <span
       css={css({
         fontSize: '24px',
-        textDecoration: 'underline',
         userSelect: 'none',
         textShadow: useShadow ? '0px 4px 4px rgba(0, 0, 0, 0.25)' : 'none',
         '&:visited': { color: 'inherit' },
