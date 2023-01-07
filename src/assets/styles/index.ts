@@ -7,7 +7,6 @@ export const underlineAnimation = (isSelected: boolean) => {
     overflow: hidden;
     display: block;
     position: relative;
-    padding: 0.2em 0;
 
     &::after {
       content: '';
@@ -15,7 +14,7 @@ export const underlineAnimation = (isSelected: boolean) => {
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 0.1em;
+      height: 2px;
       background-color: currentColor;
       transition: opacity 300ms, transform 300ms;
       opacity: 1;
@@ -24,7 +23,7 @@ export const underlineAnimation = (isSelected: boolean) => {
 
   const useAnimation = css`
     &:after {
-      transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-110%, 0, 0);
     }
 
     &:hover::after,
