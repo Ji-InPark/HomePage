@@ -35,7 +35,7 @@ function Header() {
           gap: '50px',
         })}
       >
-        <TextRouteButton text={'Home'} path={'/'} />
+        <TextRouteButton text={'Home'} path={'/home'} />
         <TextRouteButton text={'Projects'} path={'/projects'} />
         <TextRouteButton text={'Career'} path={'/career'} />
         <TextUrlButton text={'Blog'} path={'https://jin-coding.tistory.com/'} />
