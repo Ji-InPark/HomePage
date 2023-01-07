@@ -1,8 +1,9 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { darkModeAtoms } from '../../recoil/atoms';
+import { underlineAnimation } from '../../assets/styles';
 
 interface Props {
   text: string;
@@ -10,14 +11,14 @@ interface Props {
 }
 
 function TextRouteButton({ text, path }: Props) {
+  const location = useLocation();
   const useShadow = !useRecoilValue(darkModeAtoms);
 
   return (
     <span
-      css={css({
-        fontSize: '24px',
-        userSelect: 'none',
-      })}
+      css={css`
+        ${underlineAnimation(location.pathname === path)}
+      `}
     >
       <Link
         css={css({
