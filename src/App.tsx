@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Career from './pages/Career';
@@ -11,7 +11,8 @@ function App() {
       <RecoilRoot>
         <BrowserRouter>
           <Routes>
-            <Route path={'/'} element={<Home />} />
+            <Route path={'/'} element={<Navigate to={'/home'} />} />
+            <Route path={'/home'} element={<Home />} />
             <Route path={'/projects'} element={<Projects />} />
             <Route path={'/career'} element={<Career />} />
           </Routes>
