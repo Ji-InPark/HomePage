@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { css } from '@emotion/react';
+import LoadingContainer from '../../loading/LoadingContainer';
 
 interface Props {
   imageUrl: string;
@@ -8,6 +9,7 @@ interface Props {
 }
 
 function ProjectImage({ imageUrl, width = 500, height = 300 }: Props) {
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const divElement = useRef<HTMLDivElement>(null);
   const rotation = 15;
 
@@ -42,12 +44,15 @@ function ProjectImage({ imageUrl, width = 500, height = 300 }: Props) {
         },
       })}
     >
+      {isLoaded ? null : <LoadingContainer width={width} height={height} />}
       <img
         src={imageUrl}
         css={css({
           width,
           height,
+          display: isLoaded ? '' : 'none',
         })}
+        onLoad={() => setIsLoaded(true)}
       />
     </div>
   );
