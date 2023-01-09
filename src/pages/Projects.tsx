@@ -15,7 +15,7 @@ function Projects() {
     <div
       css={css({
         width: '100vw',
-        background: colors.basicBackground,
+        background: colors.background,
       })}
     >
       <div

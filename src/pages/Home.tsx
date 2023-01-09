@@ -16,7 +16,7 @@ function Home() {
       css={css({
         width: '100vw',
         height: '100vh',
-        background: colors.homeBackground,
+        background: colors.background,
       })}
     >
       <div
