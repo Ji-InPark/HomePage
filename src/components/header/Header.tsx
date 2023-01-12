@@ -37,7 +37,6 @@ function Header() {
       >
         <TextRouteButton text={'Home'} path={'/home'} />
         <TextRouteButton text={'Projects'} path={'/projects'} />
-        <TextRouteButton text={'Career'} path={'/career'} />
         <TextUrlButton text={'Blog'} path={'https://jin-coding.tistory.com/'} />
       </div>
     </div>
