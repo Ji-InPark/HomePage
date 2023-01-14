@@ -38,7 +38,7 @@ export const underlineAnimation = (isSelected: boolean) => {
   `;
 };
 
-export const textAnimation = css`
+export const textFocusInContract = css`
   animation: focus-in-contract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   @keyframes focus-in-contract {
     0% {
@@ -48,6 +48,20 @@ export const textAnimation = css`
     }
     100% {
       filter: blur(0px);
+      opacity: 1;
+    }
+  }
+`;
+
+export const textFadeInTop = css`
+  animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  @keyframes fade-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
       opacity: 1;
     }
   }

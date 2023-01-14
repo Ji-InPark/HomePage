@@ -7,7 +7,7 @@ import IconButton from '../../button/IconButton';
 import GitHub from '../../../assets/icons/GitHub';
 import Instagram from '../../../assets/icons/Instagram';
 import EMail from '../../../assets/icons/EMail';
-import { textAnimation } from '../../../assets/styles';
+import { textFocusInContract } from '../../../assets/styles';
 
 function HomeBody() {
   const iconSize = 40;
@@ -25,7 +25,7 @@ function HomeBody() {
     >
       <ProfileImage imageUrl={'https://avatars.githubusercontent.com/u/81283634?v=4'} size={250} />
       <VerticalBlank size={29} />
-      <ShadowedText text={'Ji-In Park'} fontSize={120} animation={textAnimation} />
+      <ShadowedText text={'Ji-In Park'} fontSize={120} animation={textFocusInContract} />
       <ShadowedText text={'Developer'} fontSize={32} />
       <VerticalBlank size={48} />
       <div
