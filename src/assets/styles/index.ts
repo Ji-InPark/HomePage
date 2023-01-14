@@ -37,3 +37,18 @@ export const underlineAnimation = (isSelected: boolean) => {
     ${isSelected ? '' : useAnimation}
   `;
 };
+
+export const textAnimation = css`
+  animation: focus-in-contract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  @keyframes focus-in-contract {
+    0% {
+      letter-spacing: 0.5em;
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+`;
