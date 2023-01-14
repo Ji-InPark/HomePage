@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import { Project } from '../../../types';
 import VerticalBlank from '../../blank/VerticalBlank';
 import PlainText from '../../text/PlainText';
+import { textFadeInTop } from '../../../assets/styles';
 
 interface Props {
   project: Project;
@@ -17,7 +18,7 @@ function ProjectDescription({ project }: Props) {
         userSelect: 'none',
       })}
     >
-      <PlainText fontSize={48} fontWeight={'bold'}>
+      <PlainText fontSize={48} fontWeight={'bold'} animation={textFadeInTop}>
         {project.title}
       </PlainText>
       <PlainText fontSize={18}>{project.subTitle}</PlainText>

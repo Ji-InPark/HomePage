@@ -1,19 +1,23 @@
 import React, { ReactElement } from 'react';
-import { css } from '@emotion/react';
+import { css, SerializedStyles } from '@emotion/react';
 
 interface Props {
   children: ReactElement | string | number;
   fontSize: number;
   fontWeight?: string;
+  animation?: SerializedStyles;
 }
 
-function PlainText({ children, fontSize, fontWeight = 'none' }: Props) {
+function PlainText({ children, fontSize, fontWeight = 'none', animation }: Props) {
   return (
     <div
-      css={css({
-        fontSize,
-        fontWeight,
-      })}
+      css={css([
+        animation,
+        {
+          fontSize,
+          fontWeight,
+        },
+      ])}
     >
       {children}
     </div>
